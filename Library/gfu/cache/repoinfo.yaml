@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2021-01-13T11:03:56.310+01:00
-  initializedAtString: 2021-01-13T11:03:33.742+01:00
+  lastUpdatedAtString: 2021-02-04T17:35:48.022+01:00
+  initializedAtString: 2021-02-04T17:35:48.022+01:00
   currentGitRemote:
-    name: origin
-    url: https://github.com/Francois-BONNIN/Project-M.git
+    name: 
+    url: 
     login: 
     user: 
     host: 
@@ -25,14 +25,14 @@ MonoBehaviour:
     token: 
   currentGitBranch:
     name: master
-    tracking: origin/master
+    tracking: 
   currentConfigBranch:
     name: master
     remote:
-      name: origin
-      url: https://github.com/Francois-BONNIN/Project-M.git
-    trackingBranch: master
+      name: 
+      url: 
+    trackingBranch: 
   currentConfigRemote:
-    name: origin
-    url: https://github.com/Francois-BONNIN/Project-M.git
+    name: 
+    url: 
   currentHead: 

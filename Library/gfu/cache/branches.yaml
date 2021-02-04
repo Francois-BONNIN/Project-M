@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2021-01-13T11:03:56.303+01:00
-  initializedAtString: 2021-01-13T11:03:44.460+01:00
-  localBranches: []
-  remoteBranches: []
+  lastUpdatedAtString: 2021-01-27T11:02:06.584+01:00
+  initializedAtString: 2021-01-27T11:02:06.567+01:00
+  localBranches:
+  - name: "Fran\xE7ois"
+    tracking: "origin/Fran\xE7ois"
+  - name: master
+    tracking: origin/master
+  remoteBranches:
+  - name: origin/HEAD
+    tracking: '[None]'
   remotes:
   - name: origin
     url: https://github.com/Francois-BONNIN/Project-M.git
@@ -26,12 +32,33 @@ MonoBehaviour:
     function: 0
     token: 
   localConfigBranches:
-    keys: []
-    values: []
+    keys:
+    - "Fran\xE7ois"
+    - master
+    values:
+    - name: "Fran\xE7ois"
+      remote:
+        name: origin
+        url: https://github.com/Francois-BONNIN/Project-M.git
+      trackingBranch: "Fran\xE7ois"
+    - name: master
+      remote:
+        name: origin
+        url: https://github.com/Francois-BONNIN/Project-M.git
+      trackingBranch: master
   remoteConfigBranches:
-    keys: []
-    subKeys: []
-    subKeyValues: []
+    keys:
+    - origin
+    subKeys:
+    - Values:
+      - HEAD
+    subKeyValues:
+    - Values:
+      - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/Francois-BONNIN/Project-M.git
+        trackingBranch: 
   configRemotes:
     keys:
     - origin

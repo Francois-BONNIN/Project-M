@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         Flip(rb.velocity.x);
         //animator.MoveRunLeft
 
-        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        float characterVelocity = - rb.velocity.x;
         animator.SetFloat("Speed", characterVelocity);
     }
 
