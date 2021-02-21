@@ -7,10 +7,15 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping;
     private bool isGrounded;
+    private bool m_FacingRight = true;
+
+    private float absSpeed = 0;
 
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask collisionLayers;
+
+    public Animator animator;
 
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
@@ -27,17 +32,30 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
         }
 
-        Flip(rb.velocity.x);
+        if (rb.velocity.x > 0.1f && !m_FacingRight)
+        {
+            Flip();
+        }
+        else if (rb.velocity.x < -0.1f && m_FacingRight)
+        {
+            Flip();
 
+        }
+
+        
     }
 
     void FixedUpdate()
     {
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
+        absSpeed = Mathf.Abs(horizontalMovement);
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
 
         MovePlayer(horizontalMovement);
+
+        animator.SetFloat("Speed",absSpeed);
 
     }
 
@@ -59,15 +77,11 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
-    void Flip(float _velocity)
+
+    void Flip()
     {
-        if (_velocity > 0.1f)
-        {
-            spriteRenderer.flipX = true;
-        }
-        else if (_velocity < -0.1f)
-        {
-            spriteRenderer.flipX = false;
-        }
+    	m_FacingRight = !m_FacingRight;
+
+        transform.Rotate(0f,180f,0f);
     }
 }
