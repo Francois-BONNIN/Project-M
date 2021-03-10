@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Animator animator;
 
     public float speed = 20f;
     public int damage = 40;
@@ -20,5 +19,6 @@ public class Bullet : MonoBehaviour
         {
             enemy.takeDamage(damage);
         }
+        Destroy(gameObject);
     }
 }

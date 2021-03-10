@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-
     public Transform firePoint;
     public GameObject bulletPrefab;
 
@@ -22,6 +21,6 @@ public class Weapon : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        animator.SetBool("Shoot",true);
+
     }
 }
