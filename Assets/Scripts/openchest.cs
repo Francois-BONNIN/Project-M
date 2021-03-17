@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class openchest : MonoBehaviour
 {
     private bool isInRange;
+    private bool soundAnimator = true;
     public Animator animator;
     public Text interactUI;
 
@@ -35,16 +36,25 @@ public class openchest : MonoBehaviour
 
     void OpenChest()
     {
-        audioSource.PlayOneShot(sound);
+        playAudio();
         animator.SetTrigger("OpenChest");
         GetComponent<BoxCollider2D>().enabled = false;
         interactUI.enabled = false;
-        
+        soundAnimator = false;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isInRange = false;
         interactUI.enabled = false;
+    }
+
+    void playAudio()
+    {
+        if (soundAnimator)
+        {
+            audioSource.PlayOneShot(sound);
+        }
+        
     }
 }

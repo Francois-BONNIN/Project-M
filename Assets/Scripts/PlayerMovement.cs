@@ -26,12 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             isJumping = true;
+            animator.SetBool("Jump",true);
         }
-
         if (rb.velocity.x > 0.1f && !m_FacingRight)
         {
             Flip();
@@ -39,10 +38,8 @@ public class PlayerMovement : MonoBehaviour
         else if (rb.velocity.x < -0.1f && m_FacingRight)
         {
             Flip();
-
         }
-
-        
+        animator.SetFloat("yVelocity",rb.velocity.y);
     }
 
     void FixedUpdate()
@@ -52,11 +49,12 @@ public class PlayerMovement : MonoBehaviour
         absSpeed = Mathf.Abs(horizontalMovement);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
+        animator.SetBool("Ground",isGrounded);
 
         MovePlayer(horizontalMovement);
 
-        animator.SetFloat("Speed",absSpeed);
-
+        //Course du personnage
+        animator.SetFloat("Speed", absSpeed);
     }
 
     void MovePlayer(float _horizontalMovement)
@@ -69,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(0f, jumpForce));
             isJumping = false;
+            animator.SetBool("Jump",false);
         }
     }
 
