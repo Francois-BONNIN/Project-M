@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: 1aebb6ef88a0afa40a4e2b6672fd7e40
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3141401768594150941
+    second: Batiment_Olivier_0
+  - first:
+      213: 5480238000405439435
+    second: Batiment_Olivier_1
+  - first:
+      213: 281206926994700403
+    second: Batiment_Olivier_2
+  - first:
+      213: 665206598336885422
+    second: Batiment_Olivier_3
+  - first:
+      213: -989396564162371650
+    second: Batiment_Olivier_4
+  - first:
+      213: 2394370172120582809
+    second: Batiment_Olivier_5
+  - first:
+      213: -7911756252122431957
+    second: Batiment_Olivier_6
+  - first:
+      213: -37844632007957103
+    second: Batiment_Olivier_7
+  - first:
+      213: 269964172432542318
+    second: Batiment_Olivier_8
+  - first:
+      213: -7302386017109851142
+    second: Batiment_Olivier_9
+  - first:
+      213: 7350995658585066839
+    second: Batiment_Olivier_10
+  - first:
+      213: -1783278561830742792
+    second: Batiment_Olivier_11
+  - first:
+      213: -6703072099838474032
+    second: Batiment_Olivier_12
+  - first:
+      213: -2768933013832208898
+    second: Batiment_Olivier_13
+  - first:
+      213: 147470481493892494
+    second: Batiment_Olivier_14
+  - first:
+      213: -7264488001362182854
+    second: Batiment_Olivier_15
+  - first:
+      213: -6347759705192625473
+    second: Batiment_Olivier_16
+  - first:
+      213: -3995324380099661343
+    second: Batiment_Olivier_17
+  - first:
+      213: 4320290134639853354
+    second: Batiment_Olivier_18
+  - first:
+      213: -4739457664991181113
+    second: Batiment_Olivier_19
+  - first:
+      213: 5456365152762694240
+    second: Batiment_Olivier_20
+  - first:
+      213: -7828492726118025669
+    second: Batiment_Olivier_21
+  - first:
+      213: 836269378636267251
+    second: Batiment_Olivier_22
+  - first:
+      213: 3561003351820716858
+    second: Batiment_Olivier_23
+  - first:
+      213: -3549738041644292889
+    second: Batiment_Olivier_24
+  - first:
+      213: 428657277306718694
+    second: Batiment_Olivier_25
+  - first:
+      213: -5269095128256510162
+    second: Batiment_Olivier_26
+  - first:
+      213: -8252247912590604685
+    second: Batiment_Olivier_27
+  - first:
+      213: -4150080752949163199
+    second: Batiment_Olivier_28
+  - first:
+      213: -1327922825641354106
+    second: Batiment_Olivier_29
+  - first:
+      213: 7622294639494608832
+    second: Batiment_Olivier_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Batiment_Olivier_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 101
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9692e3cbf7764d0800000000000000
+      internalID: -3141401768594150941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Batiment_Olivier_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 91
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc363c20d67bd0c40800000000000000
+      internalID: 5480238000405439435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Batiment_Olivier_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 149
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378f5efc53c07e300800000000000000
+      internalID: 281206926994700403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
