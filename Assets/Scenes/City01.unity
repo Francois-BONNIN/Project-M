@@ -640,7 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1023293518}
   timeOffset: 0.22
-  posOffset: {x: 1, y: 2, z: -1}
+  posOffset: {x: 2, y: 2, z: -1}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -24607,7 +24607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6082949781536547597, guid: b9aa955e656d2a747846635ab72fa9e3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6082949781536547598, guid: b9aa955e656d2a747846635ab72fa9e3, type: 3}
       propertyPath: m_RootOrder

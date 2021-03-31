@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool isGrounded;
     private bool m_FacingRight = true;
+    
+    public float transitionTime = 10f;
 
     private float absSpeed = 0;
 
@@ -31,6 +33,12 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             animator.SetBool("Jump",true);
         }
+
+        if (Input.GetButtonDown("Roll") && isGrounded == true)
+        {
+            Roll();
+        }
+
         if (rb.velocity.x > 0.1f && !m_FacingRight)
         {
             Flip();
@@ -82,5 +90,14 @@ public class PlayerMovement : MonoBehaviour
     	m_FacingRight = !m_FacingRight;
 
         transform.Rotate(0f,180f,0f);
+    }
+
+    IEnumerator Roll()
+    {
+        animator.SetBool("Roll",true);
+        
+        yield return new WaitForSeconds(transitionTime);
+        
+        animator.SetBool("Roll",false);
     }
 }

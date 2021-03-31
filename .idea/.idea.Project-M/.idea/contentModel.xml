@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\alexi\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\alexi\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Project-M.938954813.00" t="ExcludeRecursive" />
+    <e p="D:\Projet\Project-M\Project-M" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="AudioManager.cs" t="Include" />
+          <e p="Bullet.cs" t="Include" />
+          <e p="CameraFollow.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="EnemyPatrol.cs" t="Include" />
+          <e p="EntrerEgout.cs" t="Include" />
+          <e p="LevelLoader.cs" t="Include" />
+          <e p="openchest.cs" t="Include" />
+          <e p="parallax.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+          <e p="Weapon.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Project-M.sln" t="IncludeFlat" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
