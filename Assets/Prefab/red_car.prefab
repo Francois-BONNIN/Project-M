@@ -27,7 +27,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -61.63, y: -1.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2040045779468088903}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82,3 +83,121 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &5835339498568599641
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 377226858030730922}
+    m_Modifications:
+    - target: {fileID: 1114288071130762641, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320243118643037617, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_Color.b
+      value: 0.66188884
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320243118643037617, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320243118643037617, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1481844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320243118643037617, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_Intensity
+      value: 2.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320243118643037617, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320243118643037617, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119715944596157867, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_Name
+      value: LightCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327516288148075632, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327516288148075632, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.957
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327516288148075632, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327516288148075632, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_ShapeLightFalloffSize
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327516288148075632, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_ShapeLightFalloffOffset.x
+      value: -4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327516288148075632, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_ShapeLightFalloffOffset.y
+      value: -2.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327516288148075632, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+      propertyPath: m_ShapeLightParametricAngleOffset
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+--- !u!4 &2040045779468088903 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5527315907992763934, guid: ffde564844bbfe045a26dff1a406fb83, type: 3}
+  m_PrefabInstance: {fileID: 5835339498568599641}
+  m_PrefabAsset: {fileID: 0}

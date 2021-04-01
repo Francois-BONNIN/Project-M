@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     public Transform[] waypoints;
-
+    public int damageOnCollision = 20;
     public SpriteRenderer graphics;
     public GameObject gameObject;
 
@@ -37,9 +37,9 @@ public class Enemy : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        health -=damage;
+        health -= damage;
 
-        if(health<=0)
+        if (health <= 0)
         {
             Die();
         }
@@ -48,5 +48,16 @@ public class Enemy : MonoBehaviour
     {
         //Instantiate(deathEffect,transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            Debug.Log("Touch");
+            PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(damageOnCollision);
+            Debug.Log("Shield : " + playerHealth.currentShield + "  Health : " + playerHealth.currentHealth);
+        }
     }
 }

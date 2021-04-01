@@ -4,8 +4,18 @@ using UnityEngine.UI;
 public class openchest : MonoBehaviour
 {
     private bool isInRange;
+    private bool soundAnimator = true;
+    private bool chest = true;
+
+    public int shieldValue = 10;
+    public bool shield = true;
+
+    public int healthValue = 10;
+    public bool health = true;
     public Animator animator;
     public Text interactUI;
+
+    public PlayerHealth playerHealth;
 
     public AudioSource audioSource;
     public AudioClip sound;
@@ -35,16 +45,48 @@ public class openchest : MonoBehaviour
 
     void OpenChest()
     {
-        audioSource.PlayOneShot(sound);
+        playAudio();
         animator.SetTrigger("OpenChest");
         GetComponent<BoxCollider2D>().enabled = false;
+        getShield();
         interactUI.enabled = false;
-        
+        soundAnimator = false;
+        chest = false;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isInRange = false;
         interactUI.enabled = false;
+    }
+
+    void playAudio()
+    {
+        if (soundAnimator)
+        {
+            audioSource.PlayOneShot(sound);
+        }
+
+    }
+
+    void getShield()
+    {
+        if (chest)
+        {
+            if (shield && !health)
+            {
+                playerHealth.TakeShield(shieldValue);
+            }
+            if(!shield && health)
+            {
+                playerHealth.TakeHealth(healthValue);
+            }
+            if (shield && health)
+            {
+                playerHealth.TakeShield(shieldValue);
+                playerHealth.TakeHealth(healthValue);
+            }
+
+        }
     }
 }
