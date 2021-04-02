@@ -5412,7 +5412,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.047821045, y: -0.59921}
+  m_Offset: {x: -0.00655365, y: -0.58889407}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5423,7 +5423,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.216858, y: 1.3350203}
+  m_Size: {x: 8.051804, y: 1.1493329}
   m_EdgeRadius: 0
 --- !u!1 &713595362
 GameObject:
@@ -6150,7 +6150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0679245, y: -0.59564984}
+  m_Offset: {x: -0.04385376, y: -0.6059657}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6161,7 +6161,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.176651, y: 1.2203016}
+  m_Size: {x: 7.825905, y: 1.1721603}
   m_EdgeRadius: 0
 --- !u!1 &887079208
 GameObject:
@@ -6536,9 +6536,9 @@ GameObject:
   - component: {fileID: 1023293521}
   - component: {fileID: 1023293526}
   - component: {fileID: 1023293520}
-  - component: {fileID: 1023293519}
   - component: {fileID: 1023293524}
   - component: {fileID: 1023293525}
+  - component: {fileID: 1023293519}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -6546,8 +6546,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!70 &1023293519
-CapsuleCollider2D:
+--- !u!61 &1023293519
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6559,9 +6559,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0053803623, y: -0.008248806}
-  m_Size: {x: 0.79030806, y: 1.9702759}
-  m_Direction: 0
+  m_Offset: {x: 0.03073883, y: -0.028326988}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.66485596, y: 1.943346}
+  m_EdgeRadius: 0
 --- !u!50 &1023293520
 Rigidbody2D:
   serializedVersion: 4
@@ -7756,7 +7766,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268207036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.51, y: 0.606, z: 0}
+  m_LocalPosition: {x: 0.627, y: 0.658, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1023293523}
