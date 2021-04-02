@@ -36,9 +36,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Roll") && isGrounded == true)
         {
-            Roll();
+            animator.SetTrigger("Roll");
         }
-
+        
         if (rb.velocity.x > 0.1f && !m_FacingRight)
         {
             Flip();
@@ -90,14 +90,5 @@ public class PlayerMovement : MonoBehaviour
     	m_FacingRight = !m_FacingRight;
 
         transform.Rotate(0f,180f,0f);
-    }
-
-    IEnumerator Roll()
-    {
-        animator.SetBool("Roll",true);
-        
-        yield return new WaitForSeconds(transitionTime);
-        
-        animator.SetBool("Roll",false);
     }
 }
