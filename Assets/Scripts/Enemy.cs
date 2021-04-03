@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public Animator animator;
     public float speed;
     public Transform[] waypoints;
     public int damageOnCollision = 20;
@@ -9,6 +10,7 @@ public class Enemy : MonoBehaviour
     public GameObject gameObject;
 
     private Transform target;
+    public Transform player;
     private int destPoint = 0;
 
     public int health = 100;
@@ -23,15 +25,33 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        Vector3 distPlayerEnnemi = player.position - transform.position;
+        
         Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        // Si l'ennemi est quasiment arrivé à sa destination
-        if (Vector3.Distance(transform.position, target.position) < 0.3f)
+        //Si l'ennemi voit le joueur
+        Debug.Log(Vector3.Distance(transform.position, player.position));
+        if (Vector3.Distance(transform.position, player.position) < 8f)
         {
-            destPoint = (destPoint + 1) % waypoints.Length;
-            target = waypoints[destPoint];
-            graphics.flipX = !graphics.flipX;
+            animator.SetBool("See_Player",true);
+
+            if (Vector3.Distance(transform.position, player.position) < 5f)
+            {
+                animator.SetTrigger("Shoot");
+            }
+        }
+        else
+        {
+            animator.SetBool("See_Player",false);
+            
+            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+            // Si l'ennemi est quasiment arrivé à sa destination
+            if(Vector3.Distance(transform.position, target.position) < 0.3f)
+            {
+                destPoint = (destPoint + 1) % waypoints.Length;
+                target = waypoints[destPoint];
+                graphics.flipX = !graphics.flipX;
+            }
         }
     }
 
