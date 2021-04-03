@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -10,6 +11,9 @@ public class Enemy : MonoBehaviour
     public GameObject gameObject;
 
     private bool changeDirection = true;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    private bool isShooting = true;
     
     private Transform target;
     public Transform player;
@@ -36,21 +40,25 @@ public class Enemy : MonoBehaviour
         {
             if (target == waypoints[0] && changeDirection==true)
             {
-                graphics.flipX = !graphics.flipX;
+                transform.Rotate(0f,180f,0f);
                 changeDirection = false;
             }
             animator.SetBool("See_Player",true);
 
-            if (Vector3.Distance(transform.position, player.position) < 6f)
+            //L'ennemi tire
+            if (Vector3.Distance(transform.position, player.position) < 6f && isShooting == true)
             {
                 animator.SetTrigger("Shoot");
+                Shoot();
+                isShooting = false;
+                StartCoroutine(shoot_delayed(0.8f));
             }
         }
         else
         {
             if (target == waypoints[0] && changeDirection==false)
             {
-                graphics.flipX = !graphics.flipX;
+                transform.Rotate(0f,180f,0f);
                 changeDirection = true;
             }
             
@@ -62,11 +70,21 @@ public class Enemy : MonoBehaviour
             {
                 destPoint = (destPoint + 1) % waypoints.Length;
                 target = waypoints[destPoint];
-                graphics.flipX = !graphics.flipX;
+                transform.Rotate(0f,180f,0f);
             }
         }
     }
 
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    IEnumerator shoot_delayed(float temps)
+    {
+        yield return new WaitForSeconds(temps);
+        isShooting = true;
+    }
     public void takeDamage(int damage)
     {
         health -= damage;

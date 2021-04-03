@@ -22,7 +22,7 @@ Obligatoire | Facultatif |
  ~~Animation Roulade~~| L'expo des Anim |
  ~~Animation Tir~~ | Sauvegarder la partie |
  ~~Ennemi animé d'Alfie~~ | Sweat Personnage |
- Faire tirer l'ennemi| Correction Tir Saut |
+ ~~Faire tirer l'ennemi~~| Correction Tir Saut |
  Recul de dégat | Animation voiture |
  Map égout |  |
  Dialogue de Paul |  |
