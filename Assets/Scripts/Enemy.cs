@@ -33,12 +33,18 @@ public class Enemy : MonoBehaviour
         Debug.Log(Vector3.Distance(transform.position, player.position));
         if (Vector3.Distance(transform.position, player.position) < 8f)
         {
+            if (destPoint <= 1)
+            {
+                graphics.flipX = !graphics.flipX;
+            }
             animator.SetBool("See_Player",true);
 
             if (Vector3.Distance(transform.position, player.position) < 5f)
             {
                 animator.SetTrigger("Shoot");
             }
+
+
         }
         else
         {
