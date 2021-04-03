@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public SpriteRenderer graphics;
     public GameObject gameObject;
 
+    private bool changeDirection = true;
+    
     private Transform target;
     public Transform player;
     private int destPoint = 0;
@@ -22,7 +24,6 @@ public class Enemy : MonoBehaviour
         target = waypoints[0];
         graphics = GetComponent<SpriteRenderer>();
     }
-
     void Update()
     {
         Vector3 distPlayerEnnemi = player.position - transform.position;
@@ -33,21 +34,26 @@ public class Enemy : MonoBehaviour
         Debug.Log(Vector3.Distance(transform.position, player.position));
         if (Vector3.Distance(transform.position, player.position) < 8f)
         {
-            if (destPoint <= 1)
+            if (target == waypoints[0] && changeDirection==true)
             {
                 graphics.flipX = !graphics.flipX;
+                changeDirection = false;
             }
             animator.SetBool("See_Player",true);
 
-            if (Vector3.Distance(transform.position, player.position) < 5f)
+            if (Vector3.Distance(transform.position, player.position) < 6f)
             {
                 animator.SetTrigger("Shoot");
             }
-
-
         }
         else
         {
+            if (target == waypoints[0] && changeDirection==false)
+            {
+                graphics.flipX = !graphics.flipX;
+                changeDirection = true;
+            }
+            
             animator.SetBool("See_Player",false);
             
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
