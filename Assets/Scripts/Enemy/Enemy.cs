@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public SpriteRenderer graphics;
     public GameObject gameObject;
 
+    private bool playerSaw = false;
     private bool changeDirection = true;
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -35,8 +36,7 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
 
         //Si l'ennemi voit le joueur
-        Debug.Log(Vector3.Distance(transform.position, player.position));
-        if (Vector3.Distance(transform.position, player.position) < 8f)
+        if (Vector3.Distance(transform.position, player.position) < 8f || playerSaw ==true)
         {
             if (target == waypoints[0] && changeDirection==true)
             {
@@ -44,6 +44,12 @@ public class Enemy : MonoBehaviour
                 changeDirection = false;
             }
             animator.SetBool("See_Player",true);
+            playerSaw = true;
+
+            if (Vector3.Distance(transform.position, player.position) > 15f)
+            {
+                playerSaw = false;
+            }
 
             //L'ennemi tire
             if (Vector3.Distance(transform.position, player.position) < 6f && isShooting == true)

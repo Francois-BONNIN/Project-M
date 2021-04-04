@@ -21,7 +21,7 @@ Obligatoire | Facultatif |
  ~~Partie de Timothée~~ | Le GameObject qui permet de garder la santé entre les différentes scenes |
  ~~Animation Roulade~~| L'expo des Anim |
  ~~Animation Tir~~ | Sauvegarder la partie |
- ~~Ennemi animé d'Alfie~~ | Sweat Personnage |
+ ~~Ennemi animé d'Alfie~~ |~~Sweat Personnage~~|
  ~~Faire tirer l'ennemi~~| Correction Tir Saut |
  Recul de dégat | Animation voiture |
  Map égout |  |
