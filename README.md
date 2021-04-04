@@ -18,7 +18,7 @@ On Unity, install in *Windows>Package Manager* :
 
 Obligatoire | Facultatif |
 :----------:|:----------:|
- ~~Partie de Timothée~~ | Le GameObject qui permet de garder la santé entre les différentes scenes |
+ ~~Partie de Timothée~~ |~~Valeurs de santé gardés entre les scènes~~|
  ~~Animation Roulade~~| L'expo des Anim |
  ~~Animation Tir~~ | Sauvegarder la partie |
  ~~Ennemi animé d'Alfie~~ |~~Sweat Personnage~~|

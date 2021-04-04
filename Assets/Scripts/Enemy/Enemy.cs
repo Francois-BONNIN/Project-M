@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            if (target == waypoints[0] && changeDirection==false)
+            if (changeDirection==false)
             {
                 transform.Rotate(0f,180f,0f);
                 changeDirection = true;

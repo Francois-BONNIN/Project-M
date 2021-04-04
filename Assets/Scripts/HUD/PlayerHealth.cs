@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
@@ -16,31 +17,35 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
     public ShieldBar shieldBar;
-    void Start()
-    {
-        currentHealth = maxHealth;
-        currentShield = maxShield;
 
-        healthBar.SetMaxHealth(maxHealth);// pour que la barre de vie suive les points de vie
-        shieldBar.SetMaxShield(maxShield);
-    }
-    void Update()
+    private void Awake()
     {
-        /*        if (Input.GetKeyDown(KeyCode.H))
-                {
-                    TakeDamage(20);
-                }
-                if (Input.GetKeyDown(KeyCode.J))
-                {
-                    TakeHealth(20);
-                }
-                if (Input.GetKeyDown(KeyCode.K))
-                {
-                    TakeShield(20);
-                }*/
+        currentHealth = PlayerPrefs.GetInt("Health");
+        currentShield = PlayerPrefs.GetInt("Shield");
     }
+
+    private void Start()
+    {
+        healthBar.SetMaxHealth(maxHealth);
+        shieldBar.SetMaxShield(maxShield);
+        
+        
+    }
+
+    private void Update()
+    {
+        PlayerPrefs.SetInt("Shield",currentShield);
+        PlayerPrefs.SetInt("Health",currentHealth);
+        
+        healthBar.SetHealth(currentHealth);
+        shieldBar.SetShield(currentShield);
+    }
+
     public void TakeDamage(int damage)
     {
+        Debug.Log(PlayerPrefs.GetInt("Health"));
+        Debug.Log(PlayerPrefs.GetInt("Shield"));
+        
         if (!isInvincible)
         {
             if (currentShield > 0)
@@ -65,15 +70,11 @@ public class PlayerHealth : MonoBehaviour
                 {
                     currentHealth -= damage;
                 }
-                healthBar.SetHealth(currentHealth);
             }
             isInvincible = true;
             StartCoroutine(InvincibilityFlash());
             StartCoroutine(HandleInvicibilityDelay());
         }
-
-
-
     }
     public void TakeHealth(int health)
     {
