@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool isGrounded;
     private bool m_FacingRight = true;
+    private bool runningSound = true;
     
     public float transitionTime = 10f;
 
@@ -21,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
+
+    public AudioSource audioSource;
+    public AudioClip sound;
 
     private Vector3 velocity = Vector3.zero;
 
@@ -63,6 +67,20 @@ public class PlayerMovement : MonoBehaviour
 
         //Course du personnage
         animator.SetFloat("Speed", absSpeed);
+
+        if (absSpeed > 0.1 && isGrounded == true)
+        {
+            Debug.Log("WOUAW");
+            if (runningSound)
+            {
+                audioSource.PlayOneShot(sound);
+            }
+            runningSound = false;
+        }
+        else
+        {
+            runningSound = true;
+        }
     }
 
     void MovePlayer(float _horizontalMovement)
@@ -90,5 +108,10 @@ public class PlayerMovement : MonoBehaviour
     	m_FacingRight = !m_FacingRight;
 
         transform.Rotate(0f,180f,0f);
+    }
+
+    void playCourse()
+    {
+        
     }
 }
