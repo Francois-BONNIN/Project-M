@@ -13,13 +13,6 @@ public class LoadAndSaveData : MonoBehaviour
     void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
-
-        if (instance != null)
-        {
-            return;
-        }
-
-        instance = this;
     }
     
     void Update()
@@ -44,6 +37,9 @@ public class LoadAndSaveData : MonoBehaviour
     {
         GetComponent<BoxCollider2D>().enabled = false;
         interactUI.enabled = false;
+        
+        PlayerPrefs.SetInt("Health",100);
+        PlayerPrefs.SetInt("Shield",100);
 
 
     }

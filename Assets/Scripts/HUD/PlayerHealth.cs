@@ -28,15 +28,18 @@ public class PlayerHealth : MonoBehaviour
     {
         healthBar.SetMaxHealth(maxHealth);
         shieldBar.SetMaxShield(maxShield);
+        
+        currentHealth = PlayerPrefs.GetInt("Health",100);
+        currentShield = PlayerPrefs.GetInt("Shield",100);
     }
 
     private void Update()
     {
-        currentHealth = PlayerPrefs.GetInt("Health",100);
-        currentShield = PlayerPrefs.GetInt("Shield",100);
-        
         healthBar.SetHealth(currentHealth);
         shieldBar.SetShield(currentShield);
+        
+        PlayerPrefs.SetInt("Health",currentHealth);
+        PlayerPrefs.SetInt("Shield",currentShield);
     }
 
     public void TakeDamage(int damage)
