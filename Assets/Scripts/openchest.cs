@@ -66,7 +66,6 @@ public class openchest : MonoBehaviour
         {
             audioSource.PlayOneShot(sound);
         }
-
     }
 
     void getShield()

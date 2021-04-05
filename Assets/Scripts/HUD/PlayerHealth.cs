@@ -20,22 +20,20 @@ public class PlayerHealth : MonoBehaviour
 
     private void Awake()
     {
-        currentHealth = PlayerPrefs.GetInt("Health");
-        currentShield = PlayerPrefs.GetInt("Shield");
+        currentHealth = maxHealth;
+        currentShield = maxShield;
     }
 
     private void Start()
     {
         healthBar.SetMaxHealth(maxHealth);
         shieldBar.SetMaxShield(maxShield);
-        
-        
     }
 
     private void Update()
     {
-        PlayerPrefs.SetInt("Shield",currentShield);
-        PlayerPrefs.SetInt("Health",currentHealth);
+        currentHealth = PlayerPrefs.GetInt("Health",100);
+        currentShield = PlayerPrefs.GetInt("Shield",100);
         
         healthBar.SetHealth(currentHealth);
         shieldBar.SetShield(currentShield);
@@ -86,7 +84,6 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth += health;
         }
-        healthBar.SetHealth(currentHealth);
     }
     
     public void TakeShield(int shield)
@@ -99,7 +96,6 @@ public class PlayerHealth : MonoBehaviour
         {
             currentShield += shield;
         }
-        shieldBar.SetShield(currentShield);
     }
 
     public IEnumerator InvincibilityFlash()

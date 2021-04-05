@@ -27,4 +27,3 @@ Obligatoire | Facultatif |
  Map égout |  |
  Dialogue de Paul |  |
  Bruitages |  |
- Faire tirer l'ennemi lorsqu'il subit des dégats|  |
