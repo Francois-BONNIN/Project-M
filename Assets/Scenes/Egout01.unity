@@ -2209,6 +2209,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   animator: {fileID: 1023293525}
+  capsuleCollider2D: {fileID: 1023293519}
   rb: {fileID: 1023293520}
   spriteRenderer: {fileID: 1023293522}
   audioSource: {fileID: 1023293527}
@@ -2343,10 +2344,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023293518}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f39b0aed31410fb4ea4510416c8e664f, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -48771,6 +48772,10 @@ PrefabInstance:
     - target: {fileID: 866158682541419724, guid: 48f167da221e7474bbce315ccdbff31c, type: 3}
       propertyPath: m_Name
       value: Big Police Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 866158683046069690, guid: 48f167da221e7474bbce315ccdbff31c, type: 3}
+      propertyPath: m_Intensity
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 866158683438301364, guid: 48f167da221e7474bbce315ccdbff31c, type: 3}
       propertyPath: player
