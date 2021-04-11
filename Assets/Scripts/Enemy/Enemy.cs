@@ -57,6 +57,9 @@ public class Enemy : MonoBehaviour
                 animator.SetTrigger("Shoot");
                 Shoot();
                 isShooting = false;
+                
+                //Bruit de tir
+                
                 StartCoroutine(shoot_delayed(0.8f));
             }
         }

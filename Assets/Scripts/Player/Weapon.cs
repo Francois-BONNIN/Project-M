@@ -19,6 +19,9 @@ public class Weapon : MonoBehaviour
             animator.SetTrigger("Shoot");
             Shoot();
             isShooting = false;
+            
+            //Bruit de tir
+            
             StartCoroutine(shoot_delayed(0.5f));
         }
     }
@@ -32,6 +35,5 @@ public class Weapon : MonoBehaviour
     {
         yield return new WaitForSeconds(temps);
         isShooting = true;
-
     }
 }

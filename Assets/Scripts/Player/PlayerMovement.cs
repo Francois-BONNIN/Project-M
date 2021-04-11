@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask collisionLayers;
 
     public Animator animator;
-    public CapsuleCollider2D capsuleCollider2D;
+    public BoxCollider2D boxCollider2D;
 
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
@@ -41,12 +41,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Roll") && isGrounded == true)
         {
-            capsuleCollider2D.size = new Vector2(1.01f, 0.0001f);
-            capsuleCollider2D.offset = new Vector2(0, -0.56f);
-            Debug.Log("Avant roulade size :" + capsuleCollider2D.size);
-            Debug.Log("Avant roulade offset :" + capsuleCollider2D.offset);
+            boxCollider2D.size = new Vector2(1.10f, 1.23f);
+            boxCollider2D.offset = new Vector2(-0.01747513f, -0.3818567f);
+            Debug.Log("Avant roulade size :" + boxCollider2D.size);
+            Debug.Log("Avant roulade offset :" + boxCollider2D.offset);
 
             animator.SetTrigger("Roll");
+            
+            StartCoroutine(ResetCollider(0.7f));
         }
         
         if (rb.velocity.x > 0.1f && !m_FacingRight)
@@ -115,12 +117,13 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Rotate(0f,180f,0f);
     }
-
-    private void ResetCollider()
+    IEnumerator ResetCollider(float temps)
     {
-        capsuleCollider2D.size = new Vector2(0.7903081f, 1.970276f);
-        capsuleCollider2D.offset = new Vector2(-0.005380362f, -0.008248806f);
-        Debug.Log("Après roulade size:" + capsuleCollider2D.size);
-        Debug.Log("Après roulade offset:" + capsuleCollider2D.offset);
+        yield return new WaitForSeconds(temps);
+        
+        boxCollider2D.size = new Vector2(0.664856f, 1.943346f);
+        boxCollider2D.offset = new Vector2(0.03073883f, -0.02832699f);
+        Debug.Log("Après roulade size:" + boxCollider2D.size);
+        Debug.Log("Après roulade offset:" + boxCollider2D.offset);
     }
 }
