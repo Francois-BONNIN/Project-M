@@ -35,13 +35,11 @@ public class LoadAndSaveData : MonoBehaviour
     
     void Save()
     {
-        GetComponent<BoxCollider2D>().enabled = false;
-        interactUI.enabled = false;
-        
         PlayerPrefs.SetInt("Health",100);
         PlayerPrefs.SetInt("Shield",100);
-
-
+    
+        GetComponent<BoxCollider2D>().enabled = false;
+        interactUI.enabled = false;
     }
     
     private void OnTriggerExit2D(Collider2D collision)

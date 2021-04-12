@@ -35,21 +35,15 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
+        currentHealth = PlayerPrefs.GetInt("Health",100);
+        currentShield = PlayerPrefs.GetInt("Shield",100);
+        
         healthBar.SetHealth(currentHealth);
         shieldBar.SetShield(currentShield);
-        
-        PlayerPrefs.SetInt("Health",currentHealth);
-        PlayerPrefs.SetInt("Shield",currentShield);
-
-        currentHealth = PlayerPrefs.GetInt("Health");
-        currentShield = PlayerPrefs.GetInt("Shield");
     }
 
     public void TakeDamage(int damage)
     {
-        Debug.Log(PlayerPrefs.GetInt("Health"));
-        Debug.Log(PlayerPrefs.GetInt("Shield"));
-        
         if (!isInvincible)
         {
             if (currentShield > 0)
