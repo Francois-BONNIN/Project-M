@@ -40,6 +40,9 @@ public class PlayerHealth : MonoBehaviour
         
         PlayerPrefs.SetInt("Health",currentHealth);
         PlayerPrefs.SetInt("Shield",currentShield);
+
+        currentHealth = PlayerPrefs.GetInt("Health");
+        currentShield = PlayerPrefs.GetInt("Shield");
     }
 
     public void TakeDamage(int damage)
