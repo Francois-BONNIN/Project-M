@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
 
                 audioSource.PlayOneShot(sound);
                 
-                StartCoroutine(shoot_delayed(0.8f));
+                StartCoroutine(shoot_delayed(1.4f));
             }
         }
         else
