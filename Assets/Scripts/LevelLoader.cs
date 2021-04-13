@@ -15,6 +15,12 @@ public class LevelLoader : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             LoadNextLevel();
+            int health = PlayerPrefs.GetInt("Health");
+            int shield = PlayerPrefs.GetInt("Shield");
+
+            PlayerPrefs.SetInt("saveHealth",health);
+            PlayerPrefs.SetInt("saveShield",shield);
+
         }
     }
 

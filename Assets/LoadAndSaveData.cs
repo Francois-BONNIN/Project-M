@@ -35,8 +35,11 @@ public class LoadAndSaveData : MonoBehaviour
     
     void Save()
     {
-        PlayerPrefs.SetInt("Health",100);
-        PlayerPrefs.SetInt("Shield",100);
+        int health = PlayerPrefs.GetInt("Health");
+        int shield = PlayerPrefs.GetInt("Shield");
+
+        PlayerPrefs.SetInt("saveHealth",health);
+        PlayerPrefs.SetInt("saveShield",shield);
     
         GetComponent<BoxCollider2D>().enabled = false;
         interactUI.enabled = false;
