@@ -9,6 +9,9 @@ public class Weapon : MonoBehaviour
 
     public Animator animator;
 
+    public AudioSource audioSource;
+    public AudioClip sound;
+
     private bool isShooting = true;
 
     // Update is called once per frame
@@ -19,8 +22,8 @@ public class Weapon : MonoBehaviour
             animator.SetTrigger("Shoot");
             Shoot();
             isShooting = false;
-            
-            //Bruit de tir
+
+            audioSource.PlayOneShot(sound);
             
             StartCoroutine(shoot_delayed(0.5f));
         }

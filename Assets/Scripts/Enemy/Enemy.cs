@@ -15,7 +15,10 @@ public class Enemy : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     private bool isShooting = true;
-    
+
+    public AudioSource audioSource;
+    public AudioClip sound;
+
     private Transform target;
     public Transform player;
     private int destPoint = 0;
@@ -57,8 +60,8 @@ public class Enemy : MonoBehaviour
                 animator.SetTrigger("Shoot");
                 Shoot();
                 isShooting = false;
-                
-                //Bruit de tir
+
+                audioSource.PlayOneShot(sound);
                 
                 StartCoroutine(shoot_delayed(0.8f));
             }
