@@ -5248,9 +5248,12 @@ MonoBehaviour:
   dialogue:
     name: Rodolph
     sentences:
-    - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    - "Eh toi ! D\xE9gage de l\xE0 si tu veux pas que je m'occupe de toi ok ?\nTu
+      sais pas qui je suis *hic* j'ai fait la Grande Guerre moi ! *hic*\nJe me souviens
+      encore de tous ces cadavres sur le sol *hic*\nIls me regardaient avec des yeux
+      c'te dinguerie !"
+    - "T'\xE9coutes quand on te parle ou pas le merdeux ??\nBouge de l\xE0 si tu
+      veux pas que je te p\xEAte la gueule !"
   isInRange: 0
 --- !u!61 &592610460
 BoxCollider2D:
